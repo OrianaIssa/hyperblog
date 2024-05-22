@@ -1,0 +1,44 @@
+pwd: Mostrará la carpeta donde te encuentras actualmente
+cd /: Te lleva al home o root de la pc
+cd /c: Te lleva al disco c
+cd oissa/: Te lleva a la carpeta de tu usuario
+cd .: Carpeta actual
+cd ..: Te regresa a la carpeta anterior
+ls: Lista los archivos que se encuentran en la raiz del equipo
+ls -al: Muestra y lista todos los archivos del root, inluso los ocultos
+ls -l: muestra y lista los archivos sin mostrar los ocultos
+ls -a: Muestra todos los archivos del root
+clear o ctr + l: Limpia la consola 
+tab: Se utiliza para auto-completar el nombre de alguna carpeta en caso de que la misma exista dentro del directorio actual
+mkdir "nombre de la carpeta": Crea una carpeta con el nombre indicado en el directorio actual
+touch "nombre del archivo.txt": Crea un nuevo archivo txt en la carpeta indicada
+cat "nombre del achivo.txt": Muestra el contenido del archivo indicado
+code nombre del archivo: Abrirá el archivo en VS Code para poder modificarlo desde allí
+history: Muestra la historia de todos los comandos escritos hasta el momento actual
+!30 (numero de la linea de comando): Muestra el comando que se escribió en la linea que responde al numero de comando
+rm "nombre del archivo": Elimina el archivo señalado
+comando + --help: Arrojará todas las herramientas del comando
+
+---------------------------------Creación de repositorio y primer commit--------------------------------------------
+git init: Crea el repositorio
+code: Abre el editor de texto Visual Studio Code
+git status: Envia el estatus del repositorio
+git add "nombre del archivo": Agregará al repositorio el archivo indicado
+git rm "nombre del archivo": Remueve el archivo señalado
+git rm --cached "nombre del archivo": Remueve el archivo señalado pero lo guarda en memoria de manera que puedas recuperarlo con un "git add + nombre del archivo"
+git commit: Se utiliza para enviar o guardar los cambios en el repositorio
+*git commit -m "Este es el primer commit de este archivo": Es un commit con un comentario indicando el cambio que se está realizadno, lo cual es una buena práctica
+git config: Mostrará todas las configuraciones del Git
+git config --list: Mostrará la configuracion por defecto del Git
+git config --list --show-origin: Se muestra donde están guardadas las configuraciones del Git, o el archivo de configuración
+
+**El "--" indica que se utilizará una palabra, y el "-" significa que se utilizará un comando**
+
+git config --global user.name "Oriana Issa": Agregará el nombre del dueño del repositorio al archivo de configuración
+git config --global user.email "issaoriana1@gmail.com": Agregará el nombre del email del repositorio al archivo de configuración
+git log nombre del archivo: Mostrará todo lo referente al archivo señalado (la historia del archivo)
+
+-------------------------------Para salir de el bloque de codigo de Git Bash------------------------------------
+":wq": Guarda los cambios y sale del bloque de código si este se queda colgado
+ ":q": Sale del bloque de código si este se queda colgado
+
