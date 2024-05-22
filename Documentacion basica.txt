@@ -23,7 +23,8 @@ comando + --help: Arrojará todas las herramientas del comando
 git init: Crea el repositorio
 code: Abre el editor de texto Visual Studio Code
 git status: Envia el estatus del repositorio
-git add "nombre del archivo": Agregará al repositorio el archivo indicado
+git add "nombre del archivo": Agregará al staging el archivo indicado
+git add .: Agregará al staging todo los cambios que se hayan hecho en la carpeta actual
 git rm "nombre del archivo": Remueve el archivo señalado
 git rm --cached "nombre del archivo": Remueve el archivo señalado pero lo guarda en memoria de manera que puedas recuperarlo con un "git add + nombre del archivo"
 git commit: Se utiliza para enviar o guardar los cambios en el repositorio
@@ -36,7 +37,15 @@ git config --list --show-origin: Se muestra donde están guardadas las configura
 
 git config --global user.name "Oriana Issa": Agregará el nombre del dueño del repositorio al archivo de configuración
 git config --global user.email "issaoriana1@gmail.com": Agregará el nombre del email del repositorio al archivo de configuración
-git log nombre del archivo: Mostrará todo lo referente al archivo señalado (la historia del archivo)
+git log + nombre del archivo: Mostrará todos los commit que tiene el archivo señalado (cambios en cada commit)
+git show: Mostrará la raza de todos los cambios generados en el archivo señalado
+git diff + hash del log a consultar + hash del log a comparar: Mostrará toda la información referente al commit que se esté señalando
+git reset + hash del log de la version del commit + --hard: Hará que todo lo que se ha realizado se elimine hasta llegar a la version del hash indicado (todo lo que se haya hecho despues de ese hash se perderá)
+git reset + hash del log de la version del commit + --soft: Hará que la version del commit cambié hasta la señalada, y guardará las versiones posteriores a dicha version para mantenerla disponible
+
+
+**Si queremos enviar un commit vacio luego de guardar cambios con "add" en el archivo Git nos enviará al editor de texto de Git llamado VIM, el cual nos pedira que le agreguemos un
+nombre al cambio realizado en el commit, ya que nunca deberian enviarse los cambios vacios.
 
 -------------------------------Para salir de el bloque de codigo de Git Bash------------------------------------
 ":wq": Guarda los cambios y sale del bloque de código si este se queda colgado
