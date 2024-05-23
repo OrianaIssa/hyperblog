@@ -32,6 +32,7 @@ git commit: Se utiliza para enviar o guardar los cambios en el repositorio
 git config: Mostrará todas las configuraciones del Git
 git config --list: Mostrará la configuracion por defecto del Git
 git config --list --show-origin: Se muestra donde están guardadas las configuraciones del Git, o el archivo de configuración
+git log --stat: Mostrará los cambios especificos hechos a partir del commit
 
 **El "--" indica que se utilizará una palabra, y el "-" significa que se utilizará un comando**
 
