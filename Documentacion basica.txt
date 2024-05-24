@@ -25,14 +25,21 @@ code: Abre el editor de texto Visual Studio Code
 git status: Envia el estatus del repositorio
 git add "nombre del archivo": Agregará al staging el archivo indicado
 git add .: Agregará al staging todo los cambios que se hayan hecho en la carpeta actual
+git commit -am + comentario referente al commit: Cumple la misma funcion que el "git add" pero solo se puede usar en archivos en los que se haya utilizado el "git add", de lo contrario no se podrá utilizar.
+git commit -a: Cumplirá la misma funcion que el -am, pero abrirá el VIM para que escribamos el comentario referente al commit
 git rm "nombre del archivo": Remueve el archivo señalado
 git rm --cached "nombre del archivo": Remueve el archivo señalado pero lo guarda en memoria de manera que puedas recuperarlo con un "git add + nombre del archivo"
+git rm --force: Elimina los archivos de Git y del disco duro. Git guarda todo, por lo que podemos recuperar archivos eliminados si es necesario (empleando comandos avanzados)
 git commit: Se utiliza para enviar o guardar los cambios en el repositorio
 *git commit -m "Este es el primer commit de este archivo": Es un commit con un comentario indicando el cambio que se está realizadno, lo cual es una buena práctica
 git config: Mostrará todas las configuraciones del Git
 git config --list: Mostrará la configuracion por defecto del Git
 git config --list --show-origin: Se muestra donde están guardadas las configuraciones del Git, o el archivo de configuración
-git log --stat: Mostrará los cambios especificos hechos a partir del commit
+git log --stat: Mostrará los cambios especificos hechos a partir de cada commit
+git checkout + hash del commit + nombre del archivo (Para volver a una versión anterior del archivo): Llevará el archivo al estado que tenia durante el commit referente al hash utilizado
+git checkout + master + nombre del archivo: Llevará a la versión más actual del archivo señalado
+
+
 
 **El "--" indica que se utilizará una palabra, y el "-" significa que se utilizará un comando**
 
@@ -41,8 +48,12 @@ git config --global user.email "issaoriana1@gmail.com": Agregará el nombre del 
 git log + nombre del archivo: Mostrará todos los commit que tiene el archivo señalado (cambios en cada commit)
 git show: Mostrará la raza de todos los cambios generados en el archivo señalado
 git diff + hash del log a consultar + hash del log a comparar: Mostrará toda la información referente al commit que se esté señalando
-git reset + hash del log de la version del commit + --hard: Hará que todo lo que se ha realizado se elimine hasta llegar a la version del hash indicado (todo lo que se haya hecho despues de ese hash se perderá)
-git reset + hash del log de la version del commit + --soft: Hará que la version del commit cambié hasta la señalada, y guardará las versiones posteriores a dicha version para mantenerla disponible
+git reset + hash del log de la version del commit + --hard: Deshace todo, absolutamente todo. Toda la información de los commits y del área de staging se elimina del historial
+git reset + hash del log de la version del commit + --soft: Borra el historial y los registros de Git de commits anteriores, pero guarda los cambios en Staging para aplicar las últimas actualizaciones a un nuevo commit.
+git reset + hash del log de la version del commit + 0--mixed: Borra todo, exactamente todo. Toda la información de los commits y del área de staging se elimina del historial.
+git reset HEAD: El comando git reset saca archivos del área de staging sin borrarlos ni realizar otras acciones.
+Esto impide que los últimos cambios en estos archivos se envíen al último commit.
+Podemos incluirlos de nuevo en staging con git add si cambiamos de opinión.
 
 
 **Si queremos enviar un commit vacio luego de guardar cambios con "add" en el archivo Git nos enviará al editor de texto de Git llamado VIM, el cual nos pedira que le agreguemos un
