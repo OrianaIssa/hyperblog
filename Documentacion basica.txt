@@ -1,4 +1,5 @@
 pwd: Mostrará la carpeta donde te encuentras actualmente
+cd: Nos lleva a nuestro home
 cd /: Te lleva al home o root de la pc
 cd /c: Te lleva al disco c
 cd oissa/: Te lleva a la carpeta de tu usuario
@@ -46,7 +47,7 @@ git checkout + master + nombre del archivo: Llevará a la versión más actual d
 git config --global user.name "Oriana Issa": Agregará el nombre del dueño del repositorio al archivo de configuración
 git config --global user.email "issaoriana1@gmail.com": Agregará el nombre del email del repositorio al archivo de configuración
 git log + nombre del archivo: Mostrará todos los commit que tiene el archivo señalado (cambios en cada commit)
-git show: Mostrará la raza de todos los cambios generados en el archivo señalado
+git show: Mostrará la traza de todos los cambios generados en el archivo señalado
 git diff + hash del log a consultar + hash del log a comparar: Mostrará toda la información referente al commit que se esté señalando
 git reset + hash del log de la version del commit + --hard: Deshace todo, absolutamente todo. Toda la información de los commits y del área de staging se elimina del historial
 git reset + hash del log de la version del commit + --soft: Borra el historial y los registros de Git de commits anteriores, pero guarda los cambios en Staging para aplicar las últimas actualizaciones a un nuevo commit.
