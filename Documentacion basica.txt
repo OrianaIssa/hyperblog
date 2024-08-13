@@ -39,6 +39,7 @@ git config --list --show-origin: Se muestra donde están guardadas las configura
 git log --stat: Mostrará los cambios especificos hechos a partir de cada commit
 git checkout + hash del commit + nombre del archivo (Para volver a una versión anterior del archivo): Llevará el archivo al estado que tenia durante el commit referente al hash utilizado
 git checkout + master + nombre del archivo: Llevará a la versión más actual del archivo señalado
+gitk: Abrirá un software que viene instalado con el git y mostrará la historia del repositorio de una manera más visual
 
 
 
@@ -47,6 +48,13 @@ git checkout + master + nombre del archivo: Llevará a la versión más actual d
 git config --global user.name "Oriana Issa": Agregará el nombre del dueño del repositorio al archivo de configuración
 git config --global user.email "issaoriana1@gmail.com": Agregará el nombre del email del repositorio al archivo de configuración
 git log + nombre del archivo: Mostrará todos los commit que tiene el archivo señalado (cambios en cada commit)
+git log --all: Mostrará toda la historia que posee el repositorio, dependiendo de la rama en la que nos encontremos.
+git log --al --graph: Mostrará toda la historia del repositorio sin importar la rama.
+git log --al --graph --decorate --oneline: Mostrará toda la historia del repositorio sin importar la rama, de manera mas detallada.
+
+************************Creación de alias***********************
+alias + nombre del alias="comando que se quiere acortar" : alias arbolito="git log --all --graph --decorate --oneline": Guardará un comando largo en un nombre referencial llamado alias, para que cuando temgamos que ejecutarlo solo se tenga que colocar el nombre del alias.
+
 git show: Mostrará la traza de todos los cambios generados en el archivo señalado
 git diff + hash del log a consultar + hash del log a comparar: Mostrará toda la información referente al commit que se esté señalando
 git reset + hash del log de la version del commit + --hard: Deshace todo, absolutamente todo. Toda la información de los commits y del área de staging se elimina del historial
@@ -59,8 +67,34 @@ Podemos incluirlos de nuevo en staging con git add si cambiamos de opinión.
 
 **Si queremos enviar un commit vacio luego de guardar cambios con "add" en el archivo Git nos enviará al editor de texto de Git llamado VIM, el cual nos pedira que le agreguemos un
 nombre al cambio realizado en el commit, ya que nunca deberian enviarse los cambios vacios.
+esc + shift + zz: Guarda los comentarios referentes a un commit en el VIM y guarda el commit en cuestión
 
 -------------------------------Para salir de el bloque de codigo de Git Bash------------------------------------
 ":wq": Guarda los cambios y sale del bloque de código si este se queda colgado
  ":q": Sale del bloque de código si este se queda colgado
+
+
+
+------------------Aquí se guardaran todos los comandos que se utilicen para trabajar en Github-------------------
+git remote add origin + direccion https del repositoria en Github: 
+git remote: Muestra que existe un origin, un repositorio en Github
+git remote -v: Muestra las rutas del repositorio de Github
+git push origin main: Envia al origen la rama main
+git branch: Mostrará todas las ramas existentes en un repositorio
+git branch -m main: pasar de la rama master a la main, debido a las actualizaciones de Git
+git push origin main: Se utiliza para llevar los cambios del repositorio local a Github
+git pull origin main: Se trae y guarda los cambios hechos en el repositorio de Github al repositorio local
+
+-----------------Los tags son algo parecido a versiones de un archivo-----------------------
+
+git tag: Mostrará todos los tags que se han hecho en un repositorio
+git show-ref --tags: Para saber a que commit está conectado un tag en específico
+git push origin --tags: Enviará los cambios referentes a los tags a internet
+
+git tag -d + nombre del tag: Eliminará el tag al que se hace referencia del refpositorio local, pero se seguirá mostrando en Github, para eliminarlo del Github se debe hacer de la siguiente manera:
+git push origin :refs/tags/nombre del tag: Eliminara el tag al que se hace referencia del origen, es decir en Github
+
+
+
+***Siempre se debe traer la última version del respositorio de Github antes de hacer un commit en el repositorio local, se hace con pull
 
