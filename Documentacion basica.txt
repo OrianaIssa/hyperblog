@@ -68,6 +68,8 @@ Podemos incluirlos de nuevo en staging con git add si cambiamos de opinión.
 **Si queremos enviar un commit vacio luego de guardar cambios con "add" en el archivo Git nos enviará al editor de texto de Git llamado VIM, el cual nos pedira que le agreguemos un
 nombre al cambio realizado en el commit, ya que nunca deberian enviarse los cambios vacios.
 esc + shift + zz: Guarda los comentarios referentes a un commit en el VIM y guarda el commit en cuestión
+:q!: Salir de Vim sin guardar el comentario.
+:wq!: Para forzar el guardado y la salida.
 
 -------------------------------Para salir de el bloque de codigo de Git Bash------------------------------------
 ":wq": Guarda los cambios y sale del bloque de código si este se queda colgado
