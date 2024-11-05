@@ -100,8 +100,19 @@ git push origin :refs/tags/nombre del tag: Eliminara el tag al que se hace refer
 
 ***Siempre se debe traer la última version del respositorio de Github antes de hacer un commit en el repositorio local, se hace con pull
 
---------------------------GIT REBASE (MALA PRACTICA)----------------------------------
-git rebase: Crea y transplanta una rama a un repositorio, modificando y agregando todos los cambios que en ella se han hecho. El pegado se hace desde la rama secundaria, llamando a la rama principal por comando.
+--------------------------GIT REBASE (CAMBIOS SILENCIOSOS, MALA PRACTICA)----------------------------------
+git rebase: Crea y transplanta una rama a un repositorio, modificando y agregando todos los cambios que en ella se han hecho. El pegado se hace primero desde desde la rama secundaria,
+llamando a la rama principal por comando y luego desde la rama principal, llamando a la rama secundaria. Esto sólo debe ser utilizado en la rama locar, debido a que por ser mala práctica puede eliminar cosas importantes del repositorio.
+Una vez utilizada esta rama, los cambios realizados no se muestran en la historia y tampoco se logrará ver quién realizó dichos cambios.
+
+
+-------------------------GIT STASH-------------------------------------
+git stash: Se utiliza para guardar cambios de manera temporal, para poder utilizarlos posteriormente. Y regresa a los cambios anteriores.
+git stash list: Mostrará todo lo que tienes en stash. Muestra si tienes o no algo en stash, indica que es un trabajo en progreso (WORK IN PROGRESS), la rama donde se realizó el trabajo,
+el codigo del commit y el cambio realizado.
+git stash pop: Guardará los cambios almacenados en stash de forma permanente.
+
+
 
 
 
