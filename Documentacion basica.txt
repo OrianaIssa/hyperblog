@@ -100,3 +100,7 @@ git push origin :refs/tags/nombre del tag: Eliminara el tag al que se hace refer
 
 ***Siempre se debe traer la última version del respositorio de Github antes de hacer un commit en el repositorio local, se hace con pull
 
+--------------------------GIT REBASE (MALA PRACTICA)----------------------------------
+git rebase: Crea y transplanta una rama a un repositorio, modificando y agregando todos los cambios que en ella se han hecho.
+
+
